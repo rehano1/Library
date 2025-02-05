@@ -4,15 +4,20 @@ const myLibrary = [
 
 
 // constructor function
-function Book (title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.readTheBook = function() {
-        this.read = !this.read;
-    };
+class Book {
+    constructor (title, author, pages, read) {
+
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
     }
+    
+    readTheBook() {
+        this.read = !this.read;
+}
+    }
+    
 // to Delete an array item
 function removeItem(index) {
     myLibrary.splice(index, 1); // remove the book at specified index
