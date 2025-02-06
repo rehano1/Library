@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>library</h1>
-    <button onclick="showForm()">New Book</button>
+    <div class="main-container">
+        <div class="first-container">
+            
+            <h1>LIBRARY</h1>
+            <button onclick="showForm()" class="button">New Book</button>
+        </div>
+    
+        <div id="library-container"></div>
+        <div class="form-container" id="form-container">
+                <input type="text" id="title" placeholder="Book Title" required>
+                <input type="text" id="author" placeholder="Author">
+                <input type="number" id="pages" placeholder="Number of Pages" required>
+                <label>
+                    <input type="checkbox" id="read"> Have you read this book?
+                </label>
+                <button onclick="addBookFromForm()" class="button">Add Book</button>
+        </div>
 
-    <div id="library-container"></div>
-    <div class="form-container" id="form-container">
-            <input type="text" id="title" placeholder="Book Title" required>
-            <input type="text" id="author" placeholder="Author">
-            <input type="number" id="pages" placeholder="Number of Pages" required>
-            <label>
-                <input type="checkbox" id="read"> Have you read this book?
-            </label>
-            <button onclick="addBookFromForm()">Add Book</button>
     </div>
     <script src="script.js"></script>    
 </body>

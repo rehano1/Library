@@ -1,6 +1,61 @@
+body {
+    background-color: #FFFECB;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
 #form-container {
     display: none;
 }
 #form-container.active {
-    display: block;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 16px;
+}
+.form-container > input {
+    font-size: 16px;
+    padding: 4px 8px;
+    
+
+}
+.main-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem;
+}
+.first-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.book-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: flex-start;
+ 
+    
+
+}
+
+.button {
+    padding: 8px;
+    background-color: #37AFE1;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+.button:hover {
+    background-color: #F5F4B3;
+    color: black;
+    
+
 }

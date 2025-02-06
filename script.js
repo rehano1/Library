@@ -44,12 +44,12 @@ function displayLibary () {
 
         // Book Details 
         bookCard.innerHTML = `
-        <h3><strong>Title:</strong>${book.title}</h3>
-        <p><strong>Author:</strong>${book.author}</p>
-        <p><strong>Pages:</strong>${book.pages}</p>
-        <p><strong>Read:</strong>${book.read ? 'Yes' : 'No'}</p>
-        <button onclick="toggleReadStatus(${index})">Toggle Read</button>;
-        <button onclick="removeItem(${index})">Delete</button>;
+        <h3><strong>Title:</strong> ${book.title}</h3>
+        <p><strong>Author:</strong> ${book.author}</p>
+        <p><strong>Pages:</strong> ${book.pages}</p>
+        <p><strong>Read:</strong> ${book.read ? 'Yes' : 'No'}</p>
+        <button class="button" onclick="toggleReadStatus(${index})">Toggle Read</button>
+        <button class="button" onclick="removeItem(${index})">Delete</button>
         `
         libraryContainer.appendChild(bookCard);
     });
