@@ -39,11 +39,20 @@ function displayLibary () {
 
     myLibrary.forEach((book, index) => {
         // Create a card for each book
-        const bookCard = document.createElement('div');
-        bookCard.classList.add('book-card');
+        // const bookCard = document.createElement('div');
+        // bookCard.classList.add('book-card');
 
-        // Book Details 
-        bookCard.innerHTML = `
+        // // Book Details 
+        // bookCard.innerHTML = `
+        // <h3><strong>Title:</strong> ${book.title}</h3>
+        // <p><strong>Author:</strong> ${book.author}</p>
+        // <p><strong>Pages:</strong> ${book.pages}</p>
+        // <p><strong>Read:</strong> ${book.read ? 'Yes' : 'No'}</p>
+        // <button class="button" onclick="toggleReadStatus(${index})">Toggle Read</button>
+        // <button class="button" onclick="removeItem(${index})">Delete</button>
+        // `
+        // libraryContainer.appendChild(bookCard);
+        const bookCard = `
         <h3><strong>Title:</strong> ${book.title}</h3>
         <p><strong>Author:</strong> ${book.author}</p>
         <p><strong>Pages:</strong> ${book.pages}</p>
@@ -51,7 +60,7 @@ function displayLibary () {
         <button class="button" onclick="toggleReadStatus(${index})">Toggle Read</button>
         <button class="button" onclick="removeItem(${index})">Delete</button>
         `
-        libraryContainer.appendChild(bookCard);
+        libraryContainer.innerHTML += bookCard;
     });
 }
 // function to toggle the read status of the book

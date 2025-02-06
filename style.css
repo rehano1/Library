@@ -1,61 +1,81 @@
 body {
-    background-color: #FFFECB;
-    font-family: 'Roboto', sans-serif;
-
+  background-color: #fffecb;
+  font-family: "Roboto", sans-serif;
 }
-
 
 #form-container {
-    display: none;
+  display: none;
 }
 #form-container.active {
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 .form-container > input {
-    font-size: 16px;
-    padding: 4px 8px;
-    
-
+  font-size: 16px;
+  padding: 4px 8px;
 }
 .main-container {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    gap: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 1rem auto 0;
 }
 .first-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.book-card {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    justify-content: flex-start;
- 
-    
+/* .book-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: flex-start;
+} */
 
+.library-container {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px; */
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr auto auto;
+  text-wrap: wrap;
+  align-items: center;
+  justify-items: start;
+  /* grid-  -columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+  gap: 18px;
+}
+
+.book-card {
+  /* flex-direction: row;
+  align-items: center; */
+  /* padding: 16px; */
 }
 
 .button {
-    padding: 8px;
-    background-color: #37AFE1;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    color: white;
+  padding: 8px;
+  background-color: #37afe1;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  display: inline-flex;
+  /* check inline vs block vs flex vs inline-flex */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  white-space: nowrap;
 }
 .button:hover {
-    background-color: #F5F4B3;
-    color: black;
-    
-
+  background-color: #f5f4b3;
+  color: black;
 }
